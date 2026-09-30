@@ -61,7 +61,7 @@ jobs:
         run: |
           mkdir -p prebuilt
 
-          wget -O device/xiaomi/dew/prebuilt/kernel \
+          wget -O prebuilt/kernel \
             "https://github.com/flyshootersicha-hue/twrp_dew/releases/download/kernel/kernel"
 
           chmod 644 prebuilt/kernel
