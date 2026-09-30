@@ -59,39 +59,21 @@ jobs:
 
       - name: Download prebuilt kernel
         run: |
-          mkdir -p device/xiaomi/dew/prebuilt
+          mkdir -p prebuilt
 
           wget -O device/xiaomi/dew/prebuilt/kernel \
             "https://github.com/flyshootersicha-hue/twrp_dew/releases/download/kernel/kernel"
 
-          chmod 644 device/xiaomi/dew/prebuilt/kernel
+          chmod 644 prebuilt/kernel
 
           echo "=== Kernel ==="
-          ls -lh device/xiaomi/dew/prebuilt/kernel
+          ls -lh prebuilt/kernel
 
       - name: Verify kernel
         run: |
-          test -s device/xiaomi/dew/prebuilt/kernel
+          test -s prebuilt/kernel
 
-          file device/xiaomi/dew/prebuilt/kernel
-
-      - name: Download prebuilt kernel
-        run: |
-          mkdir -p device/xiaomi/dew/prebuilt
-
-          wget -O device/xiaomi/dew/prebuilt/kernel \
-            "https://github.com/flyshootersicha-hue/twrp_dew/releases/download/kernel/kernel"
-
-          chmod 644 device/xiaomi/dew/prebuilt/kernel
-
-          echo "=== Kernel ==="
-          ls -lh device/xiaomi/dew/prebuilt/kernel
-
-      - name: Verify kernel
-        run: |
-          test -s device/xiaomi/dew/prebuilt/kernel
-
-          file device/xiaomi/dew/prebuilt/kernel
+          file prebuilt/kernel
 
       - name: Install repo
         run: |
